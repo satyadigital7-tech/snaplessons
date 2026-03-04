@@ -10,7 +10,7 @@ const navLinks = [
     { href: "/pricing", label: "Pricing", emoji: "💰" },
     { href: "/about", label: "About", emoji: "👥" },
     { href: "/careers", label: "Careers", emoji: "🚀" },
-    { href: "/contact", label: "Contact", emoji: "📩" },
+    { href: "/contact", label: "Contact Us", emoji: "📩" },
 ];
 
 export default function Navbar() {
@@ -145,15 +145,8 @@ export default function Navbar() {
                     })}
                 </nav>
 
-                {/* Drawer Footer CTA */}
-                <div className="px-4 py-5 border-t border-dark-border/40 space-y-3">
-                    <Link
-                        href="/contact"
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-to-r from-primary to-accent text-white font-bold rounded-2xl shadow-lg text-sm"
-                    >
-                        📩 Contact Us
-                    </Link>
+                {/* Drawer Footer */}
+                <div className="px-4 py-5 border-t border-dark-border/40">
                     <p className="text-center text-slate-600 text-xs">© 2025 SnapLessons · Hyderabad</p>
                 </div>
             </div>
