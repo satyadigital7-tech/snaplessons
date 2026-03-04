@@ -65,15 +65,7 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        {/* Desktop CTA */}
-                        <div className="hidden md:flex items-center gap-3 ml-4">
-                            <Link
-                                href="/contact"
-                                className="px-6 py-2.5 bg-gradient-to-r from-primary to-accent text-white text-base font-bold rounded-2xl hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg border border-accent/40"
-                            >
-                                Contact Us
-                            </Link>
-                        </div>
+
 
                         {/* Mobile Hamburger */}
                         <button
