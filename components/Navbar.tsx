@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 
@@ -44,9 +45,15 @@ export default function Navbar() {
                 <div className="px-4 sm:px-8 py-2">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
-                        <Link href="/" className="flex flex-col items-start group select-none" aria-label="SnapLessons Home">
-                            <span className="font-extrabold text-2xl leading-tight text-white tracking-tight drop-shadow-lg">snaplessons</span>
-                            <span className="text-[0.85rem] font-semibold text-[#F5A623] -mt-1 drop-shadow">Best IT Services</span>
+                        <Link href="/" className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
+                            <Image
+                                src="/logo.png"
+                                alt="SnapLessons Logo"
+                                width={140}
+                                height={40}
+                                className="object-contain h-10 w-auto drop-shadow"
+                                priority
+                            />
                         </Link>
 
                         {/* Desktop Nav */}
@@ -107,10 +114,16 @@ export default function Navbar() {
             >
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-dark-border/40">
-                    <div className="flex flex-col">
-                        <span className="font-extrabold text-xl text-white tracking-tight">snaplessons</span>
-                        <span className="text-xs font-semibold text-[#F5A623]">Best IT Services</span>
-                    </div>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
+                        <Image
+                            src="/logo.png"
+                            alt="SnapLessons Logo"
+                            width={120}
+                            height={34}
+                            className="object-contain h-8 w-auto drop-shadow"
+                            priority
+                        />
+                    </Link>
                     <button
                         onClick={() => setIsOpen(false)}
                         className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
