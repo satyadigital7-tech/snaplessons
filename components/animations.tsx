@@ -2,9 +2,9 @@
 import { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
 
-// ── fade-up on scroll (most common section animation) ──────────────
+// ── fade-up on scroll ──────────────────────────────────────────────
 const fadeUp: Variants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0 },
 };
 
@@ -16,25 +16,25 @@ const fadeIn: Variants = {
 
 // ── slide in from left / right ─────────────────────────────────────
 const slideLeft: Variants = {
-    hidden: { opacity: 0, x: -60 },
+    hidden: { opacity: 0, x: -40 },
     visible: { opacity: 1, x: 0 },
 };
 
 const slideRight: Variants = {
-    hidden: { opacity: 0, x: 60 },
+    hidden: { opacity: 0, x: 40 },
     visible: { opacity: 1, x: 0 },
 };
 
 // ── scale pop ──────────────────────────────────────────────────────
 const scalePop: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1 },
 };
 
 // ── stagger container ───────────────────────────────────────────────
 const stagger: Variants = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.1 } },
+    visible: { transition: { staggerChildren: 0.07 } },
 };
 
 // ── Re-export variants for use in pages ────────────────────────────
@@ -57,11 +57,11 @@ export function ScrollReveal({
     className,
     variants = fadeUp,
     delay = 0,
-    duration = 0.6,
+    duration = 0.5,
     once = true,
 }: ScrollRevealProps) {
     const ref = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { once, margin: "-80px" });
+    const inView = useInView(ref, { once, margin: "-60px" });
 
     return (
         <motion.div
@@ -90,7 +90,7 @@ export function StaggerReveal({
     once?: boolean;
 }) {
     const ref = useRef<HTMLDivElement>(null);
-    const inView = useInView(ref, { once, margin: "-80px" });
+    const inView = useInView(ref, { once, margin: "-60px" });
 
     return (
         <motion.div
@@ -121,7 +121,7 @@ export function FadeItem({
         <motion.div
             className={className}
             variants={v}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
             {children}
         </motion.div>
@@ -141,9 +141,9 @@ export function HeroReveal({
     return (
         <motion.div
             className={className}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
             {children}
         </motion.div>
