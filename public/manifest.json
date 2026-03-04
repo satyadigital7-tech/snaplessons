@@ -1,0 +1,50 @@
+{
+    "name": "Snap Lessons – Digital Marketing Agency",
+    "short_name": "Snap Lessons",
+    "description": "Hyderabad's top digital marketing agency. SEO, Ads, Web Dev & Courses.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0F172A",
+    "theme_color": "#1E3A8A",
+    "orientation": "portrait-primary",
+    "categories": [
+        "business",
+        "education",
+        "productivity"
+    ],
+    "lang": "en-IN",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Free Audit",
+            "short_name": "Audit",
+            "description": "Book a free digital marketing audit",
+            "url": "/contact",
+            "icons": [
+                {
+                    "src": "/favicon.svg",
+                    "sizes": "any"
+                }
+            ]
+        },
+        {
+            "name": "Pricing",
+            "short_name": "Pricing",
+            "description": "View our pricing plans",
+            "url": "/pricing",
+            "icons": [
+                {
+                    "src": "/favicon.svg",
+                    "sizes": "any"
+                }
+            ]
+        }
+    ]
+}
