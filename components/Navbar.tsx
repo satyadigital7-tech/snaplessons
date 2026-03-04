@@ -51,18 +51,29 @@ export default function Navbar() {
 
                         {/* Desktop Nav */}
                         <div className="hidden md:flex items-center gap-2 ml-6">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className={`px-4 py-2 rounded-xl text-base font-semibold transition-all duration-200 ${pathname === link.href
-                                        ? "text-gold bg-gold/20 shadow"
-                                        : "text-slate-200 hover:text-white hover:bg-gold/10 hover:shadow-md"
-                                        }`}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isContact = link.href === "/contact";
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className={
+                                            isContact
+                                                ? `px-5 py-2 rounded-xl text-base font-bold transition-all duration-200 shadow-lg border ${isActive
+                                                    ? "bg-blue-500 text-white border-blue-400"
+                                                    : "bg-gradient-to-r from-blue-600 to-blue-500 text-white border-blue-500/50 hover:opacity-90 hover:scale-105"
+                                                }`
+                                                : `px-4 py-2 rounded-xl text-base font-semibold transition-all duration-200 ${isActive
+                                                    ? "text-gold bg-gold/20 shadow"
+                                                    : "text-slate-200 hover:text-white hover:bg-gold/10 hover:shadow-md"
+                                                }`
+                                        }
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
                         </div>
 
 
