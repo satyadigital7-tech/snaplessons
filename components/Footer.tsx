@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SnapLessonsLogo from "@/components/svgs/SnapLessonsLogo";
+import Image from "next/image";
 
 const footerLinks = {
     Services: [
@@ -71,8 +71,13 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="flex flex-col items-start mb-4 select-none" aria-label="SnapLessons Home">
-                            <span className="font-extrabold text-2xl leading-tight text-white tracking-tight drop-shadow-lg">snaplessons</span>
-                            <span className="text-[0.85rem] font-semibold text-[#F5A623] -mt-1 drop-shadow">Best IT Services</span>
+                            <Image
+                                src="/logo.png"
+                                alt="SnapLessons Logo"
+                                width={140}
+                                height={40}
+                                className="object-contain h-10 w-auto drop-shadow"
+                            />
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
                             Hyderabad&apos;s fastest-growing digital marketing agency. We transform
@@ -97,7 +102,7 @@ export default function Footer() {
                                 <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
-                                +91 91000 00000
+                                +91 8121919443
                             </div>
                         </div>
                         {/* Social Links */}
@@ -140,7 +145,7 @@ export default function Footer() {
             <div className="border-t border-dark-border">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-slate-500 text-sm">
-                        © {new Date().getFullYear()} Snap Lessons. All rights reserved.
+                        © 2024 Snap Lessons. All rights reserved.
                     </p>
                     <div className="flex items-center gap-2 text-slate-500 text-sm">
                         <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
