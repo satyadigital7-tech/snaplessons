@@ -25,21 +25,31 @@ export default function ContactPage() {
         e.preventDefault();
         setLoading(true);
 
+        // Your Google Apps Script Web App URL
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbykoZBeat-TBBM4BmwWIkzjl7zgbS8S4sCLHYrsFIc5qMRa4vae76ktdeKyNXz6xSd1/exec";
+
         try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(form),
+            // Convert state to URL search params for Google Script compatibility
+            const formData = new URLSearchParams();
+            Object.entries(form).forEach(([key, value]) => {
+                formData.append(key, value);
             });
 
-            if (!res.ok) throw new Error("Failed to submit");
+            await fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Essential for Google Script Redirects
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: formData.toString(),
+            });
 
+            // Since mode is 'no-cors', we won't get a status back, 
+            // but if it doesn't catch an error, the request was sent.
             setSubmitted(true);
             setForm({ name: "", email: "", phone: "", company: "", service: "", budget: "", message: "" });
         } catch (error) {
-            console.error(error);
+            console.error("Submission error:", error);
             alert("Something went wrong. Please try again or contact us via WhatsApp.");
         } finally {
             setLoading(false);
@@ -67,7 +77,7 @@ export default function ContactPage() {
                 </HeroReveal>
             </section>
 
-            {/* ── Contact Form (full width) ────────────────────── */}
+            {/* ── Contact Form ────────────────────── */}
             <section className="py-12 bg-dark">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollReveal>
@@ -134,12 +144,11 @@ export default function ContactPage() {
                                         onSubmit={handleSubmit}
                                         className="space-y-5"
                                     >
-                                        {/* Row 1 */}
                                         <div className="grid sm:grid-cols-2 gap-5">
                                             <div>
                                                 <label className="block text-slate-400 text-xs mb-1.5 font-medium">Full Name *</label>
                                                 <input
-                                                    required type="text" value={form.name}
+                                                    required name="name" type="text" value={form.name}
                                                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                                                     placeholder="Rahul Sharma"
                                                     className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm placeholder:text-slate-600 focus:outline-none focus:border-accent transition-colors"
@@ -148,7 +157,7 @@ export default function ContactPage() {
                                             <div>
                                                 <label className="block text-slate-400 text-xs mb-1.5 font-medium">Email Address *</label>
                                                 <input
-                                                    required type="email" value={form.email}
+                                                    required name="email" type="email" value={form.email}
                                                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                                                     placeholder="rahul@company.com"
                                                     className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm placeholder:text-slate-600 focus:outline-none focus:border-accent transition-colors"
@@ -156,12 +165,11 @@ export default function ContactPage() {
                                             </div>
                                         </div>
 
-                                        {/* Row 2 */}
                                         <div className="grid sm:grid-cols-2 gap-5">
                                             <div>
                                                 <label className="block text-slate-400 text-xs mb-1.5 font-medium">Phone Number *</label>
                                                 <input
-                                                    required type="tel" value={form.phone}
+                                                    required name="phone" type="tel" value={form.phone}
                                                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                                                     placeholder="+91 98765 43210"
                                                     className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm placeholder:text-slate-600 focus:outline-none focus:border-accent transition-colors"
@@ -170,7 +178,7 @@ export default function ContactPage() {
                                             <div>
                                                 <label className="block text-slate-400 text-xs mb-1.5 font-medium">Company Name</label>
                                                 <input
-                                                    type="text" value={form.company}
+                                                    name="company" type="text" value={form.company}
                                                     onChange={(e) => setForm({ ...form, company: e.target.value })}
                                                     placeholder="Your Company Pvt Ltd"
                                                     className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm placeholder:text-slate-600 focus:outline-none focus:border-accent transition-colors"
@@ -178,11 +186,10 @@ export default function ContactPage() {
                                             </div>
                                         </div>
 
-                                        {/* Service */}
                                         <div>
                                             <label className="block text-slate-400 text-xs mb-1.5 font-medium">Service Interested In *</label>
                                             <select
-                                                required value={form.service}
+                                                required name="service" value={form.service}
                                                 onChange={(e) => setForm({ ...form, service: e.target.value })}
                                                 className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors appearance-none"
                                             >
@@ -191,7 +198,6 @@ export default function ContactPage() {
                                             </select>
                                         </div>
 
-                                        {/* Budget */}
                                         <div>
                                             <label className="block text-slate-400 text-xs mb-1.5 font-medium">Monthly Budget (INR)</label>
                                             <div className="grid grid-cols-4 gap-2">
@@ -212,18 +218,16 @@ export default function ContactPage() {
                                             </div>
                                         </div>
 
-                                        {/* Message */}
                                         <div>
                                             <label className="block text-slate-400 text-xs mb-1.5 font-medium">Tell us about your business</label>
                                             <textarea
-                                                rows={4} value={form.message}
+                                                name="message" rows={4} value={form.message}
                                                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                                placeholder="Brief description of your goals, challenges, and what you're hoping to achieve..."
+                                                placeholder="Brief description of your goals..."
                                                 className="w-full bg-dark border border-dark-border rounded-xl px-4 py-3 text-white text-sm placeholder:text-slate-600 focus:outline-none focus:border-accent transition-colors resize-none"
                                             />
                                         </div>
 
-                                        {/* Submit */}
                                         <motion.button
                                             type="submit"
                                             disabled={loading}
@@ -231,25 +235,10 @@ export default function ContactPage() {
                                             whileTap={{ scale: 0.98 }}
                                             className="w-full btn-primary py-4 text-base justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
-                                            {loading ? (
-                                                <>
-                                                    <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-                                                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                                                    </svg>
-                                                    Sending...
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                                                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                                                    </svg>
-                                                    Send Message &amp; Get Free Audit
-                                                </>
-                                            )}
+                                            {loading ? "Sending..." : "Send Message & Get Free Audit"}
                                         </motion.button>
                                         <p className="text-center text-slate-600 text-xs">
-                                            By submitting, you agree to our Privacy Policy. No spam, ever.
+                                            By submitting, you agree to our Privacy Policy.
                                         </p>
                                     </motion.form>
                                 )}
@@ -272,7 +261,7 @@ export default function ContactPage() {
                                 </svg>
                                 <div>
                                     <p className="text-green-400 font-semibold text-sm">Chat on WhatsApp</p>
-                                    <p className="text-slate-500 text-xs">Instant response · Available 9AM–9PM</p>
+                                    <p className="text-slate-500 text-xs">Instant response · 9AM–9PM</p>
                                 </div>
                             </motion.a>
                         </FadeItem>
@@ -287,7 +276,7 @@ export default function ContactPage() {
                                 </svg>
                                 <div>
                                     <p className="text-blue-400 font-semibold text-sm">info@snaplessons.in</p>
-                                    <p className="text-slate-500 text-xs">We reply within 2–4 hours</p>
+                                    <p className="text-slate-500 text-xs">Reply within 2–4 hours</p>
                                 </div>
                             </motion.a>
                         </FadeItem>
