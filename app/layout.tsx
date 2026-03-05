@@ -6,11 +6,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
     title: {
-        default: "SnapLessons | Digital Marketing Agency Hyderabad",
-        template: "%s | SnapLessons",
+        default: "snaplessons | Digital Marketing Agency Hyderabad",
+        template: "%s | snaplessons",
     },
     description:
-        "SnapLessons is a top digital marketing agency in Hyderabad offering SEO, Google Ads, Social Media, Web Development, and Digital Marketing Courses. Grow your business with India's fastest digital partner.",
+        "snaplessons is a top digital marketing agency in Hyderabad offering SEO, Google Ads, Social Media, Web Development, and Digital Marketing Courses. Grow your business with India's fastest digital partner.",
     keywords: [
         "digital marketing agency hyderabad",
         "SEO company hyderabad",
@@ -20,21 +20,21 @@ export const metadata: Metadata = {
         "digital marketing courses",
         "snaplessons",
     ],
-    authors: [{ name: "SnapLessons", url: "https://snaplessons.in" }],
-    creator: "SnapLessons",
+    authors: [{ name: "snaplessons", url: "https://snaplessons.in" }],
+    creator: "snaplessons",
     metadataBase: new URL("https://snaplessons.in"),
     openGraph: {
         type: "website",
         locale: "en_IN",
         url: "https://snaplessons.in",
-        title: "SnapLessons | Digital Marketing Agency Hyderabad",
+        title: "snaplessons | Digital Marketing Agency Hyderabad",
         description:
             "Top digital marketing agency in Hyderabad. SEO, Ads, Social Media, Web Dev & Courses.",
-        siteName: "SnapLessons",
+        siteName: "snaplessons",
     },
     twitter: {
         card: "summary_large_image",
-        title: "SnapLessons | Digital Marketing Agency",
+        title: "snaplessons | Digital Marketing Agency",
         description: "Grow your business with Hyderabad's top digital marketing agency.",
     },
     robots: { index: true, follow: true },

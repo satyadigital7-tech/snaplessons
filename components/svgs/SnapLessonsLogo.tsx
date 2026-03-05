@@ -1,12 +1,12 @@
 /**
- * SnapLessonsLogo
- * Accurate SVG recreation of the official SnapLessons logo:
+ * snaplessonsLogo
+ * Accurate SVG recreation of the official snaplessons logo:
  *  - Dual-tone S-shaped swoosh/flame (gold #F5A623 outer + navy #1E3A8A inner, white gap)
  *  - "snaplessons" bold navy wordmark
  *  - "IT Services & Online Education" gold tagline
  *
- * Usage in navbar (horizontal):  <SnapLessonsLogo className="h-12 w-auto" />
- * Usage standalone (stacked):    <SnapLessonsLogo stacked className="w-32" />
+ * Usage in navbar (horizontal):  <snaplessonsLogo className="h-12 w-auto" />
+ * Usage standalone (stacked):    <snaplessonsLogo stacked className="w-32" />
  */
 interface Props {
     className?: string;
@@ -14,7 +14,7 @@ interface Props {
     stacked?: boolean;
 }
 
-export default function SnapLessonsLogo({ className = "", stacked = false }: Props) {
+export default function snaplessonsLogo({ className = "", stacked = false }: Props) {
     if (stacked) {
         // Vertical layout matching the uploaded brand image
         return (

@@ -5,7 +5,7 @@ import { ScrollReveal, StaggerReveal, FadeItem, HeroReveal, slideLeft, slideRigh
 
 
 const milestones = [
-    { year: "2016", event: "Founded in a small office in Jubilee Hills" },
+    { year: "2022", event: "Founded in a small office in Jubilee Hills" },
     { year: "2018", event: "First major IT infrastructure project delivered" },
     { year: "2020", event: "Expanded to cloud, cybersecurity, and managed IT services" },
     { year: "2022", event: "Reached 100+ IT clients, opened Hitech City office" },
@@ -38,7 +38,7 @@ export default function AboutPage() {
                                 <span className="gradient-text">for Businesses</span>
                             </h1>
                             <p className="text-lg text-slate-400 leading-relaxed mb-6">
-                                SnapLessons was founded in 2016 in Hyderabad with a simple mission: deliver reliable, innovative IT services to businesses of all sizes.
+                                snaplessons was founded in 2022 in Hyderabad with a simple mission: deliver reliable, innovative IT services to businesses of all sizes.
                             </p>
                             <p className="text-lg text-slate-400 leading-relaxed mb-8">
                                 We started with three passionate IT professionals and a vision for smarter business technology. Today, we&apos;re a team of 30+ engineers and consultants, helping 200+ organizations across India with web development, cloud, cybersecurity, and managed IT support.
@@ -81,10 +81,10 @@ export default function AboutPage() {
                         </ScrollReveal>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* ── Core Values ─────────────────────────────────── */}
-            <section className="py-16 bg-dark-card border-y border-dark-border">
+            < section className="py-16 bg-dark-card border-y border-dark-border" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollReveal className="text-center mb-12">
                         <h2 className="text-3xl font-display font-bold text-white">
@@ -107,10 +107,10 @@ export default function AboutPage() {
                         ))}
                     </StaggerReveal>
                 </div>
-            </section>
+            </section >
 
             {/* ── Timeline ─────────────────────────────────────── */}
-            <section className="py-20 bg-dark border-t border-dark-border">
+            < section className="py-20 bg-dark border-t border-dark-border" >
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollReveal className="text-center mb-16">
                         <h2 className="text-3xl font-display font-bold text-white">
@@ -152,7 +152,7 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 }

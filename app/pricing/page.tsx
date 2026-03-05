@@ -61,7 +61,7 @@ const plans = [
         ),
     },
     {
-        name: "Enterprise", price: "59,999", period: "/ month",
+        name: "Enterprise", price: "49,999", period: "/ month",
         badge: "All-Inclusive", badgeColor: "bg-purple-500/20 text-purple-400 border-purple-500/30",
         description: "End-to-end digital transformation for market leaders.",
         gradient: "from-purple-500/10 to-transparent", border: "border-purple-500/30", accentColor: "text-purple-400",
@@ -69,7 +69,7 @@ const plans = [
             { text: "Everything in Growth plan", included: true },
             { text: "Custom Website / Web App Development", included: true },
             { text: "CRM + ERP Integration", included: true },
-            { text: "Google Ads (₹2L+ budget)", included: true },
+            { text: "Google Ads (₹1L+ budget)", included: true },
             { text: "YouTube & OTT Advertising", included: true },
             { text: "Dedicated Account Manager", included: true },
             { text: "Advanced Analytics & Reporting", included: true },

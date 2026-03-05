@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
     title: "Home",
     description:
-        "SnapLessons – Hyderabad's leading digital marketing agency. SEO, Google Ads, Social Media, Web Development & Digital Marketing Courses. Grow 10x with us.",
+        "snaplessons – Hyderabad's leading digital marketing agency. SEO, Google Ads, Social Media, Web Development & Digital Marketing Courses. Grow 10x with us.",
 };
 
 const stats = [
@@ -269,8 +269,8 @@ export default function HomePage() {
                     </ScrollReveal>
                     <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { name: "Rahul Sharma", company: "TechNova Pvt Ltd", text: "SnapLessons tripled our organic traffic in just 4 months. Their SEO strategy is unmatched in Hyderabad!", rating: 5 },
-                            { name: "Priya Reddy", company: "EcoSpark Organics", text: "Our Google Ads ROI improved by 340% after hiring SnapLessons. Every rupee spent shows clear results.", rating: 5 },
+                            { name: "Rahul Sharma", company: "TechNova Pvt Ltd", text: "snaplessons tripled our organic traffic in just 4 months. Their SEO strategy is unmatched in Hyderabad!", rating: 5 },
+                            { name: "Priya Reddy", company: "EcoSpark Organics", text: "Our Google Ads ROI improved by 340% after hiring snaplessons. Every rupee spent shows clear results.", rating: 5 },
                             { name: "Mohammed Ali", company: "SwiftSell", text: "The website they built is lightning fast and beautiful. Our conversion rate jumped from 1.2% to 4.8%!", rating: 5 },
                         ].map((t) => (
                             <FadeItem key={t.name}>

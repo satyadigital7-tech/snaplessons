@@ -45,8 +45,8 @@ export default function Navbar() {
                 <div className="px-4 sm:px-8 py-2">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
-                            <img src="/snaplessons (1).jpg" alt="SnapLessons Logo" className="object-contain h-10 w-auto drop-shadow" />
+                        <Link href="/" className="flex items-center gap-2 select-none" aria-label="snaplessons Home">
+                            <img src="/snaplessons (1).jpg" alt="snaplessons Logo" className="object-contain h-10 w-auto drop-shadow" />
                         </Link>
 
                         {/* Desktop Nav */}
@@ -107,8 +107,8 @@ export default function Navbar() {
             >
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-dark-border/40">
-                    <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
-                        <img src="/logo.png" alt="SnapLessons Logo" className="object-contain h-8 w-auto drop-shadow" />
+                    <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 select-none" aria-label="snaplessons Home">
+                        <img src="/logo.png" alt="snaplessons Logo" className="object-contain h-8 w-auto drop-shadow" />
                     </Link>
                     <button
                         onClick={() => setIsOpen(false)}
@@ -146,7 +146,7 @@ export default function Navbar() {
 
                 {/* Drawer Footer */}
                 <div className="px-4 py-5 border-t border-dark-border/40">
-                    <p className="text-center text-slate-600 text-xs">© 2025 SnapLessons · Hyderabad</p>
+                    <p className="text-center text-slate-600 text-xs">© 2025 snaplessons · Hyderabad</p>
                 </div>
             </div>
         </>

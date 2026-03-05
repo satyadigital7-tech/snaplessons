@@ -261,7 +261,7 @@ export default function ContactPage() {
                         </FadeItem>
                         <FadeItem>
                             <motion.a
-                                href="mailto:hello@snaplessons.in"
+                                href="mailto:info@snaplessons.in"
                                 whileHover={{ scale: 1.03 }}
                                 className="flex items-center gap-4 p-4 rounded-xl bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 transition-colors"
                             >
@@ -269,7 +269,7 @@ export default function ContactPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <div>
-                                    <p className="text-blue-400 font-semibold text-sm">hello@snaplessons.in</p>
+                                    <p className="text-blue-400 font-semibold text-sm">info@snaplessons.in</p>
                                     <p className="text-slate-500 text-xs">We reply within 2–4 hours</p>
                                 </div>
                             </motion.a>
