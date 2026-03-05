@@ -24,9 +24,26 @@ export default function ContactPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        await new Promise((r) => setTimeout(r, 1200));
-        setLoading(false);
-        setSubmitted(true);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(form),
+            });
+
+            if (!res.ok) throw new Error("Failed to submit");
+
+            setSubmitted(true);
+            setForm({ name: "", email: "", phone: "", company: "", service: "", budget: "", message: "" });
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again or contact us via WhatsApp.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
