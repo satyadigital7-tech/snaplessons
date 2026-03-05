@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Careers",
     description:
-        "Join Snap Lessons – Hyderabad's fastest-growing digital marketing agency. Open positions in SEO, Ads, Development, Social Media and more. Apply today!",
+        "Join SnapLessons – Hyderabad's fastest-growing digital marketing agency. Open positions in SEO, Ads, Development, Social Media and more. Apply today!",
 };
 
 const openings = [
@@ -103,7 +103,7 @@ export default function CareersPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-display font-bold text-white">
-                            Why Work at <span className="gradient-text">Snap Lessons?</span>
+                            Why Work at <span className="gradient-text">SnapLessons?</span>
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

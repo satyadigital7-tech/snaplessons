@@ -5,7 +5,7 @@ import { ScrollReveal, StaggerReveal, FadeItem, HeroReveal, slideLeft, slideRigh
 export const metadata: Metadata = {
     title: "Services",
     description:
-        "Explore Snap Lessons' full suite of digital marketing services: Web Development, SEO, Google Ads, Social Media, Analytics, and Digital Marketing Courses in Hyderabad.",
+        "Explore SnapLessons' full suite of digital marketing services: Web Development, SEO, Google Ads, Social Media, Analytics, and Digital Marketing Courses in Hyderabad.",
 };
 
 const services = [

@@ -1,6 +1,6 @@
 {
-    "name": "Snap Lessons – Digital Marketing Agency",
-    "short_name": "Snap Lessons",
+    "name": "SnapLessons – Digital Marketing Agency",
+    "short_name": "SnapLessons",
     "description": "Hyderabad's top digital marketing agency. SEO, Ads, Web Dev & Courses.",
     "start_url": "/",
     "display": "standalone",
@@ -15,9 +15,9 @@
     "lang": "en-IN",
     "icons": [
         {
-            "src": "/favicon.svg",
-            "sizes": "any",
-            "type": "image/svg+xml",
+            "src": "/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
             "purpose": "any maskable"
         }
     ],
@@ -29,8 +29,9 @@
             "url": "/contact",
             "icons": [
                 {
-                    "src": "/favicon.svg",
-                    "sizes": "any"
+                    "src": "/favicon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
                 }
             ]
         },
@@ -41,8 +42,9 @@
             "url": "/pricing",
             "icons": [
                 {
-                    "src": "/favicon.svg",
-                    "sizes": "any"
+                    "src": "/favicon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
                 }
             ]
         }

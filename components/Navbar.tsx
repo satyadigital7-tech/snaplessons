@@ -46,14 +46,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
-                            <Image
-                                src="/logo.png"
-                                alt="SnapLessons Logo"
-                                width={140}
-                                height={40}
-                                className="object-contain h-10 w-auto drop-shadow"
-                                priority
-                            />
+                            <img src="/snaplessons (1).jpg" alt="SnapLessons Logo" className="object-contain h-10 w-auto drop-shadow" />
                         </Link>
 
                         {/* Desktop Nav */}
@@ -115,14 +108,7 @@ export default function Navbar() {
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-dark-border/40">
                     <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 select-none" aria-label="SnapLessons Home">
-                        <Image
-                            src="/logo.png"
-                            alt="SnapLessons Logo"
-                            width={120}
-                            height={34}
-                            className="object-contain h-8 w-auto drop-shadow"
-                            priority
-                        />
+                        <img src="/logo.png" alt="SnapLessons Logo" className="object-contain h-8 w-auto drop-shadow" />
                     </Link>
                     <button
                         onClick={() => setIsOpen(false)}

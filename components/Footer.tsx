@@ -72,7 +72,7 @@ export default function Footer() {
                     <div className="lg:col-span-2">
                         <Link href="/" className="flex flex-col items-start mb-4 select-none" aria-label="SnapLessons Home">
                             <Image
-                                src="/logo.png"
+                                src="/snaplessons (1).jpg"
                                 alt="SnapLessons Logo"
                                 width={140}
                                 height={40}
@@ -145,7 +145,7 @@ export default function Footer() {
             <div className="border-t border-dark-border">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-slate-500 text-sm">
-                        © 2024 Snap Lessons. All rights reserved.
+                        © 2024 SnapLessons. All rights reserved.
                     </p>
                     <div className="flex items-center gap-2 text-slate-500 text-sm">
                         <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />

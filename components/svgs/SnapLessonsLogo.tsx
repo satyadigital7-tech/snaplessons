@@ -1,6 +1,6 @@
 /**
  * SnapLessonsLogo
- * Accurate SVG recreation of the official Snap Lessons logo:
+ * Accurate SVG recreation of the official SnapLessons logo:
  *  - Dual-tone S-shaped swoosh/flame (gold #F5A623 outer + navy #1E3A8A inner, white gap)
  *  - "snaplessons" bold navy wordmark
  *  - "IT Services & Online Education" gold tagline

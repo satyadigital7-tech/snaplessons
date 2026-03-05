@@ -38,7 +38,7 @@ export default function AboutPage() {
                                 <span className="gradient-text">for Businesses</span>
                             </h1>
                             <p className="text-lg text-slate-400 leading-relaxed mb-6">
-                                Snap Lessons was founded in 2016 in Hyderabad with a simple mission: deliver reliable, innovative IT services to businesses of all sizes.
+                                SnapLessons was founded in 2016 in Hyderabad with a simple mission: deliver reliable, innovative IT services to businesses of all sizes.
                             </p>
                             <p className="text-lg text-slate-400 leading-relaxed mb-8">
                                 We started with three passionate IT professionals and a vision for smarter business technology. Today, we&apos;re a team of 30+ engineers and consultants, helping 200+ organizations across India with web development, cloud, cybersecurity, and managed IT support.
