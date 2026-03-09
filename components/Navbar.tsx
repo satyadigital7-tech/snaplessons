@@ -108,7 +108,7 @@ export default function Navbar() {
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-dark-border/40">
                     <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 select-none" aria-label="snaplessons Home">
-                        <img src="/logo.png" alt="snaplessons Logo" className="object-contain h-8 w-auto drop-shadow" />
+                        <img src="/snaplessons (1).jpg" alt="snaplessons Logo" className="object-contain h-8 w-auto drop-shadow" />
                     </Link>
                     <button
                         onClick={() => setIsOpen(false)}

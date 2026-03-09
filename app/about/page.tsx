@@ -5,11 +5,10 @@ import { ScrollReveal, StaggerReveal, FadeItem, HeroReveal, slideLeft, slideRigh
 
 
 const milestones = [
-    { year: "2022", event: "Founded in a small office in Jubilee Hills" },
-    { year: "2018", event: "First major IT infrastructure project delivered" },
-    { year: "2020", event: "Expanded to cloud, cybersecurity, and managed IT services" },
-    { year: "2022", event: "Reached 100+ IT clients, opened Hitech City office" },
-    { year: "2024", event: "Launched 24/7 managed IT support and consulting" },
+    { year: "2022", event: "Founded in a small office in Jubilee Hills with a team of 3" },
+    { year: "2023", event: "Expanded to cloud, cybersecurity, and managed IT services" },
+    { year: "2024", event: "Reached 100+ IT clients and opened our Hitech City office" },
+    { year: "2025", event: "Launched 24/7 managed IT support and premium consulting" },
     { year: "2026", event: "Serving 200+ businesses with end-to-end IT solutions" },
 ];
 
@@ -123,7 +122,7 @@ export default function AboutPage() {
                         <div className="space-y-12">
                             {milestones.map((m, i) => (
                                 <ScrollReveal
-                                    key={m.year}
+                                    key={`${m.year}-${i}`}
                                     variants={i % 2 === 0 ? slideLeft : slideRight}
                                     delay={i * 0.08}
                                 >

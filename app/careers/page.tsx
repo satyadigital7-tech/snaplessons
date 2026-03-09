@@ -184,43 +184,7 @@ export default function CareersPage() {
                         ))}
                     </div>
 
-                    {/* Org chart SVG */}
-                    <div className="mt-20 text-center">
-                        <h3 className="text-2xl font-display font-bold text-white mb-8">Our <span className="gradient-text">Structure</span></h3>
-                        <div className="overflow-x-auto">
-                            <svg viewBox="0 0 700 280" fill="none" className="w-full max-w-3xl mx-auto" xmlns="http://www.w3.org/2000/svg">
-                                {/* CEO */}
-                                <rect x="280" y="10" width="140" height="50" rx="10" fill="#1E3A8A" stroke="#3B82F6" strokeWidth="2" />
-                                <text x="350" y="31" textAnchor="middle" fill="white" fontSize="12" fontWeight="700" fontFamily="Inter">CEO / Founder</text>
-                                <text x="350" y="47" textAnchor="middle" fill="#94A3B8" fontSize="10" fontFamily="Inter">Arjun Reddy</text>
-                                {/* Connector */}
-                                <line x1="350" y1="60" x2="350" y2="90" stroke="#334155" strokeWidth="1.5" />
-                                <line x1="100" y1="90" x2="600" y2="90" stroke="#334155" strokeWidth="1.5" />
-                                {/* Dept connectors */}
-                                {[100, 250, 400, 550].map((x) => (
-                                    <line key={x} x1={x + 60} y1="90" x2={x + 60} y2="110" stroke="#334155" strokeWidth="1.5" />
-                                ))}
-                                {/* Dept boxes */}
-                                {[
-                                    { x: 20, label: "SEO", sub: "Sneha Sharma", color: "#F59E0B" },
-                                    { x: 170, label: "Paid Ads", sub: "Rahul Verma", color: "#EF4444" },
-                                    { x: 320, label: "Development", sub: "Dev Kumar", color: "#3B82F6" },
-                                    { x: 470, label: "Social & Content", sub: "Priya Nair", color: "#8B5CF6" },
-                                ].map((dept) => (
-                                    <g key={dept.label}>
-                                        <rect x={dept.x} y={110} width={140} height={50} rx="8" fill="#1E293B" stroke={dept.color} strokeWidth="1.5" />
-                                        <text x={dept.x + 70} y={131} textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter">{dept.label}</text>
-                                        <text x={dept.x + 70} y={147} textAnchor="middle" fill="#94A3B8" fontSize="9" fontFamily="Inter">{dept.sub}</text>
-                                        {/* Connector down */}
-                                        <line x1={dept.x + 70} y1={160} x2={dept.x + 70} y2={185} stroke="#334155" strokeWidth="1" />
-                                        <rect x={dept.x + 20} y={185} width={100} height={35} rx="6" fill="#0F172A" stroke={dept.color} strokeWidth="1" strokeDasharray="3 2" />
-                                        <text x={dept.x + 70} y={201} textAnchor="middle" fill="#64748B" fontSize="9" fontFamily="Inter">4–6 specialists</text>
-                                        <text x={dept.x + 70} y={213} textAnchor="middle" fill="#64748B" fontSize="9" fontFamily="Inter">+ freelancers</text>
-                                    </g>
-                                ))}
-                            </svg>
-                        </div>
-                    </div>
+
                 </div>
             </section>
         </>
